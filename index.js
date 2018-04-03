@@ -28,23 +28,22 @@ console.log("AWS Lambda SES Forwarder // @arithmetric // Version 4.2.0");
 //   To match a mailbox name on all domains, use a key without the "at" symbol
 //   and domain part of an email address (i.e. `info`).
 var defaultConfig = {
-  fromEmail: "noreply@example.com",
+  fromEmail: "no-reply@autodesk.io",
   subjectPrefix: "",
-  emailBucket: "s3-bucket-name",
-  emailKeyPrefix: "emailsPrefix/",
+  emailBucket: "adn-ses-2018",
+  emailKeyPrefix: "ses/",
   forwardMapping: {
-    "info@example.com": [
-      "example.john@example.com",
-      "example.jen@example.com"
+    "no-reply@autodesk.io": [
+      "adn-ses@autodesk.com"
     ],
-    "abuse@example.com": [
-      "example.jim@example.com"
+    "webmaster@autodesk.io": [
+      "adn.sparks@autodesk.com"
     ],
-    "@example.com": [
-      "example.john@example.com"
+    "admin@autodesk.io": [
+      "adn.sparks@autodesk.com"
     ],
-    "info": [
-      "info@example.com"
+    "lucille@autodesk.io": [
+      "fauvel.lucille@yahoo.com"
     ]
   }
 };
